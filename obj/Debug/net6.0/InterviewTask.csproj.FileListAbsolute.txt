@@ -1,0 +1,15 @@
+/home/mirasal/Work/InterviewTask/bin/Debug/net6.0/InterviewTask
+/home/mirasal/Work/InterviewTask/bin/Debug/net6.0/InterviewTask.deps.json
+/home/mirasal/Work/InterviewTask/bin/Debug/net6.0/InterviewTask.runtimeconfig.json
+/home/mirasal/Work/InterviewTask/bin/Debug/net6.0/InterviewTask.dll
+/home/mirasal/Work/InterviewTask/bin/Debug/net6.0/InterviewTask.pdb
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.csproj.AssemblyReference.cache
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.AssemblyInfoInputs.cache
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.AssemblyInfo.cs
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.csproj.CoreCompileInputs.cache
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.dll
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/refint/InterviewTask.dll
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.pdb
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/InterviewTask.genruntimeconfig.cache
+/home/mirasal/Work/InterviewTask/obj/Debug/net6.0/ref/InterviewTask.dll
