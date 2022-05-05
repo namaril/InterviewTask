@@ -29,8 +29,13 @@ using System;
         System.Console.WriteLine("Time: {0}", DateTime.Now.Subtract(start).TotalSeconds);
         System.Console.WriteLine();
 
+        start = DateTime.Now;
+        System.Console.WriteLine("Pairs: {0}",TestList.Pass4(TestList1.TestArray, true));
+        System.Console.WriteLine("Time: {0}", DateTime.Now.Subtract(start).TotalSeconds);
+        System.Console.WriteLine();
+
         // Second test run, with random larger array
-        var TestList2 = new TestList(100000, 1, 100000);
+        var TestList2 = new TestList(1000, 1, 100000);
         TestList2.PrintList();
 
         start = DateTime.Now;

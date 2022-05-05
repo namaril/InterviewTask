@@ -122,10 +122,36 @@ public class TestList
         return cnt;
     }
 
-    public static int Pass4(int[] arr, bool printList)
+    // An alternative solution is to use a hash table to determine the frequency of each element. The hash table is then read from both directions
+    // to determine if progressively closer elements have a sum already hashed
+    public static int Pass4(int[] arr, bool printPairs)
     {
         int cnt = 0;
+        System.Console.WriteLine("Pass 4");
+        int[] hash = new int[arr.Max()];
+        
+        for (int i = 0; i < arr.Length; i++)
+        {
+            hash[arr[i]]++;
+        }
 
+        for (int i = 0; i <= hash.Length; i++)
+        {
+            for (int j = hash.Length; j > i; j--)
+            {
+                if ((hash[i] > 0) & (hash[j] > 0) & (i + j <= arr.Max()))
+                {
+                    if (hash[i+j] > 0)
+                    {
+                        cnt += Math.Max(hash[i+j], Math.Max(hash[i], hash[j]));
+                        if (printPairs)
+                        {
+                            System.Console.WriteLine("({0},{1}) = {2}", i, j, i + j);
+                        }
+                    }
+                } 
+            }
+        }
         return cnt;
     }
 }
