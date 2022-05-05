@@ -2,14 +2,14 @@ using System;
 
 public class TestList
 {
-    static int[] arr = {10, 5, 2, 7, 7, 49};
+    static int[] defaultArray = {10, 5, 2, 7, 7, 49};
     
     public int[] TestArray;
 
     // Default constructor generates provided example list
     public TestList()
     {
-        TestArray = arr;
+        TestArray = defaultArray;
     }
 
     // Secondary constructor generates random list of specified length, between specified values, in order to better test performance of implementations
@@ -127,29 +127,45 @@ public class TestList
     public static int Pass4(int[] arr, bool printPairs)
     {
         int cnt = 0;
+
         System.Console.WriteLine("Pass 4");
-        int[] hash = new int[arr.Max()];
+        int[] hash = new int[arr.Max() + 1];
         
         for (int i = 0; i < arr.Length; i++)
-        {
-            hash[arr[i]]++;
+        {            
+            hash[arr[i]]++;   
         }
 
-        for (int i = 0; i <= hash.Length; i++)
+        for (int i = 0; i < hash.Length / 2 + 1; i++)
         {
-            for (int j = hash.Length; j > i; j--)
+            if (hash[i] > 0)
             {
-                if ((hash[i] > 0) & (hash[j] > 0) & (i + j <= arr.Max()))
+                for (int j = hash.Length - 1; j > i; j--)
                 {
-                    if (hash[i+j] > 0)
+                    if ((hash[j] > 0) & (i + j < hash.Length)) 
                     {
-                        cnt += Math.Max(hash[i+j], Math.Max(hash[i], hash[j]));
-                        if (printPairs)
+                        if (hash[i+j] > 0)
                         {
-                            System.Console.WriteLine("({0},{1}) = {2}", i, j, i + j);
+                            cnt += hash[i] * hash[j] * hash[i + j];
+                            if (printPairs)
+                            {
+                                System.Console.WriteLine("({0},{1}) = {2}   {3};{4};{5};{6}", i, j, i + j, hash[i], hash[j], hash[i+j], hash[i] * hash[j] + hash[i + j]);
+                            }
                         }
                     }
-                } 
+                }
+            }
+            // A check needs to be implemented when i has multiple values that can be added together to obtain a sum in the array
+            if ((hash[i] > 1) & (2 * i < hash.Length)) 
+            {      
+                if (hash[2 * i] > 0)
+                {           
+                    cnt += Math.Max(hash[2 * i], hash[i] * hash[i]);
+                    if (printPairs)
+                    {
+                        System.Console.WriteLine("({0},{1}) = {2}", i, i, 2 * i);
+                    }
+                }
             }
         }
         return cnt;
