@@ -35,7 +35,7 @@ using System;
         System.Console.WriteLine();
 
         // Second test run, with random larger array
-        var TestList2 = new TestList(100, 1, 1000);
+        var TestList2 = new TestList(1000, 1, 10000);
         TestList2.PrintList();
 
         start = DateTime.Now;

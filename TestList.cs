@@ -149,7 +149,7 @@ public class TestList
                             cnt += hash[i] * hash[j] * hash[i + j];
                             if (printPairs)
                             {
-                                System.Console.WriteLine("({0},{1}) = {2}   {3};{4};{5};{6}", i, j, i + j, hash[i], hash[j], hash[i+j], hash[i] * hash[j] + hash[i + j]);
+                                System.Console.WriteLine("({0},{1}) = {2}", i, j, i + j, hash[i], hash[j], hash[i+j], hash[i] * hash[j] + hash[i + j]);
                             }
                         }
                     }
